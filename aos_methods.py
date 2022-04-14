@@ -308,10 +308,10 @@ def delete_account():
         sleep(3)
         delete_btn = driver.find_element(By.XPATH, '//button[contains(., "Delete Account")]')
         print(f' Delete Button display condition is : {delete_btn.is_displayed()}')
-        driver.find_element(By.XPATH, '//button[contains(., "Delete Account")]').click()
+        driver.find_element(By.CLASS_NAME, 'deleteBtnText').click()
         print(f' pop up window will appear asking the user to confirm deletetion, Are you sure you want to delete account?')
         sleep(1)
-        driver.find_element(By.XPATH, '//div[@class="deletePopupBtn deleteRed"]').click()
+        driver.find_element(By.CLASS_NAME, 'deletePopupBtn').click()
         sleep(3)
         print('deleted account successfully')
 
